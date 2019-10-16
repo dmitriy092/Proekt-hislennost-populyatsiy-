@@ -118,5 +118,75 @@ klcikl.place(x = 85, y = 345)
 bt_graf=Button(mainloop, text="График", bg="Gray")
 bt_graf.place(x=40, y = 415)
 
+
+#2(1)
+def ngrost(event):
+    A = float(zhertv.get())
+    N = int(klcikl.get())
+    grtv = int(zhertv7.get())
+    
+   for i in range(N):
+        grtv = grtv*A
+        
+   Label ent["text"] = str(int(grtv))
+    
+ bt_ngrost.bind("<Button 1>", ngrost)
+ 
+
+#2(2)
+def ogrost(event):
+    A = float(zhertv.get())
+    B = float(zhertv2.get()
+    N = int(klcikl.get())
+    grtv = int(zhertv7.get())
+   
+   for i in range(N):
+        grtv = (A-B*grtv)*grtv
+ 
+   Label ent2["text"] = str(int(grtv)) 
+        
+ bt_ogrost.bind("<Button 1>", ogrost)
+ 
+ 
+ #2(3)
+ def ogtrapp(event):
+    A = float(zhertv.get())
+    B = float(zhertv2.get()
+    C = float(zhertv3.get())
+    N = int(klcikl.get())
+    grtv = int(zhertv7.get()
+   
+   for i in range(N):
+        grtv = (A-B*grtv)*grtv-C
+        
+   Label ent3["text"] = str(int(grtv))
+   
+  bt_ogtrapp.bind("<Button 1>", ogtrapp)
+  
+  
+  #2(4)
+  def predat(event):
+    A = float(zhertv.get())
+    B = float(zhertv2.get()
+    C = float(zhertv3.get())
+    D = float(zhertv4.get())
+    F = float(zhertv5.get())
+    G = float(zhertv6.get())
+    N = int(klcikl.get())
+    grtv = int(zhertv7.get()
+    prdtrs = int(zhertv8.get()
+  
+  for i in range(N):
+       grtv = (A-B*grtv)*grtv-C-F*grtv*prdtrs
+       prdtrs = D*prdtrs+G*grtv*prdtrs
+       
+  Label victims1["text"] = str(int(grtv))
+  Label predators1["text"] = str(int(prdtrs))
+  
+ bt_predat.bind("<Button 1>", predat)
+ 
+ 
 canv=Canvas(mainloop, width=200, heigh=200, bg="white", )
 canv.place(x=135, y=285)
+
+root.mainloop ()
